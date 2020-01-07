@@ -1,10 +1,24 @@
-## @SpringBootApplication
+# Spring Boot Study
+* 매주 금요일에 진행하는 스터디 내용과 개인 공부내용을 정리한다.
+
+## 환경
+* Spring version 5.x
+* Boot 2.2
+
+
+## Mission
+- 1주차 미션 : [네이버 Open API 연동 및 컨텐츠 API 구현](https://github.com/ohtaeg/boot-study-friday/blob/master/docs/mission1.md)
+
+<br>
+
+## I learn
+### @SpringBootApplication
 - @SpringBootConfiguration
 - @ComponentScan
 - @EnableAutoConfiguration <br>
 @SpringBootApplication 어노테이션은 위 3가지의 어노테이션을 사용하는것과 같다.
 
-## @EnableAutoConfiguration
+### @EnableAutoConfiguration
 - 어플리케이션 등록시, 빈을 두 단계를 거쳐 등록 한다.
     1. @ComponentScan
     2. @EnableAutoConfiguration
@@ -78,7 +92,7 @@ org.springframework.boot:spring-boot-autoconfigure Library 안의 META-INF/sprin
 - 만약 @ComponentScan과 @EnableAutoConfigure가 같은 빈을 등록한다면 @ComponentScan 때 등록한 빈을 @EnableAutoConfigure가 덮어 씌울 것이다. <br>
   덮어쓰는 걸 방지하려면 @ConditionalOnMissingBean를 통해 빈을 등록 못했을때 등록하도록 설정해준다.
 
-### Issue
+### Immutable Properties Issue
 - 외부 모듈, jar의 파일을 Immutable Configure properties를 만들려고 하니
 많은 시간을 공들여도 해결하지 못했다. <br>
 - 문서를 뒤져보다가 헌재 이 이슈가 공식 github에 이슈로 등록이 되어있는걸 뒤늦게 봤다. 해결되면 고쳐보자.. ㅠㅠ
