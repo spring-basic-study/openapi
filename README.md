@@ -4,6 +4,8 @@
 ## 환경
 * Spring version 5.x
 * Boot 2.2
+* Open JDK 11
+* Junit5 + AssertJ + Mockito
 
 
 ## Mission
@@ -37,6 +39,7 @@
     <code>)</code>
 </pre>
 
+- @EnableAutoConfiguration은 추가된 jar dependency 기반으로 Spring application을 자동으로 설정하는 것을 시도한다
 - @EnableAutoConfiguration이 빈을 등록하는 방법은 <br>
 org.springframework.boot:spring-boot-autoconfigure Library 안의 META-INF/spring.factories 라는 파일에 있는 값들을 읽어 등록 한다. <br>
 [spring.factories 파일](https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot-autoconfigure/src/main/resources/META-INF/spring.factories)
