@@ -94,9 +94,3 @@ org.springframework.boot:spring-boot-autoconfigure Library 안의 META-INF/sprin
 
 - 만약 @ComponentScan과 @EnableAutoConfigure가 같은 빈을 등록한다면 @ComponentScan 때 등록한 빈을 @EnableAutoConfigure가 덮어 씌울 것이다. <br>
   덮어쓰는 걸 방지하려면 @ConditionalOnMissingBean를 통해 빈을 등록 못했을때 등록하도록 설정해준다.
-
-### Immutable Properties Issue
-- 외부 모듈, jar의 파일을 Immutable Configure properties를 만들려고 하니
-많은 시간을 공들여도 해결하지 못했다. <br>
-- 문서를 뒤져보다가 헌재 이 이슈가 공식 github에 이슈로 등록이 되어있는걸 뒤늦게 봤다. 해결되면 고쳐보자.. ㅠㅠ
-- [Immutable Properties Issue](https://github.com/spring-projects/spring-boot/issues/18646)
