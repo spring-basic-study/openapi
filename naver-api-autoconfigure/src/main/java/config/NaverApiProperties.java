@@ -2,10 +2,11 @@ package config;
 
 import exception.InvalidUrlException;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 
 // TODO : Immutable ConfigureProperties
-@ConfigurationProperties("naver.openapi")
-public class Properties {
+@ConfigurationProperties(prefix = "naver.openapi")
+public class NaverApiProperties {
     private String url;
     private String clientId;
     private String clientSecret;
