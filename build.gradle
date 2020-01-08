@@ -18,6 +18,8 @@ repositories {
     mavenCentral()
 }
 
+ext["lombok.version"] = "1.18.8"
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
