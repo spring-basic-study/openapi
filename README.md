@@ -40,6 +40,7 @@ https://developers.naver.com/docs/common/openapiguide/apilist.md#%EA%B2%80%EC%83
 2. 블로그, 영화 OpenAPI 구현시 사용한 RestTemplate 호출 구문의 중복을 최소화 해보자.
 3. RestTemplate 의 쓰레드풀, TimeOut 등의 설정을 변경해보자.
 4. 블로그, 또는 영화 정보 조회 시 LIMIT 로 개수를 제한해본다.
+ - (Open API 호출할때가 아니라) Open API 에서 가져온 데이터를 제한해서 제공
 
 
 ## STEP03
