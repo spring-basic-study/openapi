@@ -1,8 +1,8 @@
 package me.ohtaeg.domain.search.repository;
 
+import me.ohtaeg.api.dto.SearchWord;
 import me.ohtaeg.domain.response.Blog;
 import me.ohtaeg.domain.search.RequestVariableName;
-import me.ohtaeg.domain.search.SearchWord;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.util.UriComponentsBuilder;
 
