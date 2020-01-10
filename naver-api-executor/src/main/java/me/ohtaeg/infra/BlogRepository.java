@@ -2,7 +2,7 @@ package me.ohtaeg.infra;
 
 import config.NaverApiProperties;
 import me.ohtaeg.domain.response.Blog;
-import me.ohtaeg.domain.search.SearchWord;
+import me.ohtaeg.api.dto.SearchWord;
 import me.ohtaeg.domain.search.repository.SearchRepository;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
