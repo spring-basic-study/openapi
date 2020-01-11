@@ -1,12 +1,7 @@
 package me.ohtaeg.domain.response;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.stereotype.Component;
-
-import java.time.LocalDateTime;
 import java.util.List;
 
-@Component
 public abstract class OpenApi {
 //    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
 //    LocalDateTime lastBuildDate;
@@ -20,8 +15,8 @@ public abstract class OpenApi {
         String title;
         String link;
         String description;
-        String bloggerName;
-        String bloggerLink;
+        String bloggername;
+        String bloggerlink;
 
         public String getTitle() {
             return title;
@@ -47,20 +42,20 @@ public abstract class OpenApi {
             this.description = description;
         }
 
-        public String getBloggerName() {
-            return bloggerName;
+        public String getBloggername() {
+            return bloggername;
         }
 
-        public void setBloggerName(final String bloggerName) {
-            this.bloggerName = bloggerName;
+        public void setBloggername(final String bloggername) {
+            this.bloggername = bloggername;
         }
 
-        public String getBloggerLink() {
-            return bloggerLink;
+        public String getBloggerlink() {
+            return bloggerlink;
         }
 
-        public void setBloggerLink(final String bloggerLink) {
-            this.bloggerLink = bloggerLink;
+        public void setBloggerlink(final String bloggerlink) {
+            this.bloggerlink = bloggerlink;
         }
     }
 
