@@ -1,0 +1,4 @@
+## blog api call
+GET http://localhost:8080/api/blog?query=스프링부트&display=1&start=1&sort=sim
+
+###

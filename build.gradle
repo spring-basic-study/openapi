@@ -1,0 +1,43 @@
+buildscript {
+	ext {
+		springBootVersion = '2.2.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "io.spring.gradle:dependency-management-plugin:1.0.8.RELEASE"
+	}
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+
+	group = 'me.ohtaeg'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = '1.8'
+
+	repositories {
+		mavenCentral()
+	}
+
+	configurations {
+		developmentOnly
+		runtimeClasspath {
+			extendsFrom developmentOnly
+		}
+	}
+
+	test {
+		useJUnitPlatform()
+	}
+}
+
+project(':naver-api-executor') {
+	dependencies {
+		compile project(':naver-api-autoconfigure')
+	}
+}
