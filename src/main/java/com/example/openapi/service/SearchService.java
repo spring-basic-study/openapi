@@ -22,7 +22,7 @@ public class SearchService {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("X-Naver-Client-Id", blogProperties.getClientId());
         httpHeaders.add("X-Naver-Client-Secret", blogProperties.getClientSecret());
-        String url = blogProperties.getSearchUrl() + "?query=" + text;
+        String url = blogProperties.getSearchUrl() + "?query=" + text + "?display=" + 10;
 
         return restTemplate.exchange(url, HttpMethod.GET, new HttpEntity(httpHeaders), SearchResponse.class);
     }

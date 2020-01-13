@@ -10,8 +10,8 @@ import org.springframework.web.client.RestTemplate;
 @EnableConfigurationProperties({BlogProperties.class})
 public class ApiConfiguration {
     @Bean
-    public BlogProperties blogProperties(BlogProperties blogProperties){
-       return blogProperties;
+    public BlogProperties blogProperties(){
+       return new BlogProperties();
     }
 
     @Bean
