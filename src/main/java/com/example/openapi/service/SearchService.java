@@ -13,6 +13,10 @@ import org.springframework.web.client.RestTemplate;
 public class SearchService {
     RestTemplate restTemplate;
     BlogProperties blogProperties;
+    SearchService(BlogProperties blogProperties, RestTemplate restTemplate){
+        this.blogProperties = blogProperties;
+        this.restTemplate = restTemplate;
+    }
 
     public ResponseEntity<SearchResponse> Search(String text){
         HttpHeaders httpHeaders = new HttpHeaders();
