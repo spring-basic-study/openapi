@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Getter
 @Setter
 @ConfigurationProperties(prefix = "naver.openapi")
-public class BlogProperties {
+public class SearchProperties {
     private String searchUrl;
     private String clientId;
     private String clientSecret;
