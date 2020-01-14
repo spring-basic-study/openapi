@@ -9,6 +9,6 @@ public class SearchResult {
     private String title;
     private String link;
     private String description;
-    private String bloggerName;
-    private String bloggerLink;
+    private String bloggername;
+    private String bloggerlink;
 }
