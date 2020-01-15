@@ -1,6 +1,6 @@
 package com.example.openapi.controller;
 
-import com.example.openapi.repository.SearchResponse;
+import com.example.openapi.repository.BlogSearchResponse;
 import com.example.openapi.service.SearchService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ public class HomeController {
     }
 
     @GetMapping("/api/search")
-    public ResponseEntity<SearchResponse> search(String query){
+    public ResponseEntity<BlogSearchResponse> search(String query){
         return searchService.search(query);
     }
 }

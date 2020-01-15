@@ -8,7 +8,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Setter
 @ConfigurationProperties(prefix = "naver.openapi")
 public class SearchProperties {
-    private String searchUrl;
+    private String blogUrl;
+    private String movieUrl;
     private String clientId;
     private String clientSecret;
 }
