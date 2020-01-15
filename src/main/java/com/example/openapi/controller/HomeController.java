@@ -15,7 +15,7 @@ public class HomeController {
     }
 
     @GetMapping("/api/search")
-    public ResponseEntity<SearchResponse> search(String q){
-        return searchService.search(q);
+    public ResponseEntity<SearchResponse> search(String query){
+        return searchService.search(query);
     }
 }
