@@ -18,7 +18,7 @@ public class SearchService {
         this.restTemplate = restTemplate;
     }
 
-    public ResponseEntity<SearchResponse> Search(String text){
+    public ResponseEntity<SearchResponse> search(String text){
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("X-Naver-Client-Id", searchProperties.getClientId());
         httpHeaders.add("X-Naver-Client-Secret", searchProperties.getClientSecret());

@@ -12,5 +12,9 @@
         <module name="openapi.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="openapi.main" target="1.8" />
+      <module name="openapi.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
