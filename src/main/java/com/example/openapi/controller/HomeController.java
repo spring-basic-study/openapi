@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    SearchService searchService;
+    private final SearchService searchService;
 
     public HomeController(SearchService searchService){ //@Autowired말고 생성자로 주입하기
         this.searchService = searchService;

@@ -11,8 +11,8 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class SearchService {
-    RestTemplate restTemplate;
-    SearchProperties searchProperties;
+    private final RestTemplate restTemplate;
+    private final SearchProperties searchProperties;
     SearchService(SearchProperties searchProperties, RestTemplate restTemplate){
         this.searchProperties = searchProperties;
         this.restTemplate = restTemplate;
