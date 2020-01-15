@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -16,9 +17,12 @@ public class HomeController {
     }
 
     @GetMapping("/blog")
-    public ResponseEntity<ResponseNaverBlog> getTest(){
+    public ResponseEntity<ResponseNaverBlog> Search(@RequestParam("query") String apiSearch){
+        return getTest(apiSearch);
+    }
 
-        return blogService.findByQuery("스프링부트");
+    public ResponseEntity<ResponseNaverBlog> getTest(String blogSearch){
+        return blogService.findByQuery(blogSearch);
     }
 
 }
