@@ -10,7 +10,7 @@
 
 ## Mission
 - 1주차 미션 : [네이버 Open API 연동 및 컨텐츠 API 구현](https://github.com/ohtaeg/boot-study-friday/blob/master/docs/mission1.md)
-
+- 2주차 미션 : [2주차 미션](https://github.com/ohtaeg/boot-study-friday/blob/master/docs/mission2.md)
 <br>
 
 ## I learn
