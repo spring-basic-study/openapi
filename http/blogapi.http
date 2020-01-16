@@ -1,4 +1,11 @@
-## blog api call
-GET http://localhost:8080/api/blog?query=스프링부트&display=1&start=1&sort=sim
+## blog api full paramter call
+GET http://localhost:8080/api/blog?query=스프링부트&display=3&start=1&sort=date
+###
 
+## blog api each paramter call
+GET http://localhost:8080/api/blog?query=스프링부트&display=1
+###
+
+## blog api error url, no query paramter call
+GET http://localhost:8080/api/blog?display=1
 ###
