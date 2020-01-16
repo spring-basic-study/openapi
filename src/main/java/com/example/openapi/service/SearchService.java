@@ -13,6 +13,7 @@ import java.util.List;
 
 @Service
 public class SearchService {
+    static final int LIMIT = 5;
     private final RestTemplate restTemplate;
     private final SearchProperties searchProperties;
 
@@ -26,10 +27,24 @@ public class SearchService {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("X-Naver-Client-Id", searchProperties.getClientId());
         httpHeaders.add("X-Naver-Client-Secret", searchProperties.getClientSecret());
-        String blogUrl = searchProperties.getBlogUrl() + "?query=" + text + "?start=" + 2;
+        String blogUrl = searchProperties.getBlogUrl() + "?query=" + text;
         String movieUrl = searchProperties.getMovieUrl() + "?query=" + text;
-        list.add(restTemplate.exchange(blogUrl, HttpMethod.GET, new HttpEntity(httpHeaders), BlogSearchResponse.class).getBody());
-        list.add(restTemplate.exchange(movieUrl, HttpMethod.GET, new HttpEntity(httpHeaders), MovieSearchResponse.class).getBody());
+        BlogSearchResponse blogSearchResponse
+                = restTemplate.exchange(blogUrl, HttpMethod.GET, new HttpEntity(httpHeaders),
+                BlogSearchResponse.class).getBody();
+        MovieSearchResponse movieSearchResponse
+                = restTemplate.exchange(movieUrl, HttpMethod.GET, new HttpEntity(httpHeaders), MovieSearchResponse.class).getBody();
+        List<BlogSearchResponse.SearchResult> blogItems = new LinkedList<BlogSearchResponse.SearchResult>();
+        List<MovieSearchResponse.MovieSearchResult> movieItems = new LinkedList<MovieSearchResponse.MovieSearchResult>();
+        for(int i=0;i<LIMIT;i++){
+            movieItems.add(movieSearchResponse.getItems().get(i));
+            blogItems.add(blogSearchResponse.getItems().get(i));
+        }
+        blogSearchResponse.setItems(blogItems);
+        movieSearchResponse.setItems(movieItems);
+
+        list.add(blogSearchResponse); //return list
+        list.add(movieSearchResponse);
         return list;
     }
 }
