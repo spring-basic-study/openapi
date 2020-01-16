@@ -1,20 +1,15 @@
 package me.ohtaeg.api.dto;
 
-import me.ohtaeg.domain.search.exception.NoQueryException;
-import org.springframework.util.StringUtils;
+import javax.validation.constraints.NotBlank;
 
 public class SearchWord {
-    private final String query;
-    private int display;
-    private int start;
-    private String sort;
+    @NotBlank(message = "쿼리는 필수값 입니다.")
+    protected final String query;
+    protected int display = 1;
+    protected int start = 1;
 
-    public SearchWord(final String query, final int display, final int start, final String sort) {
-        // TODO 삼항연산자 메소드로 추출.
-        this.query = validNecessaryQuery(query);
-        this.display = (display == 0) ? 1 : display;
-        this.start = (start == 0) ? 1 : start;;
-        this.sort = (StringUtils.isEmpty(sort)) ? "sim" : sort;
+    public SearchWord(final String query) {
+        this.query = query;
     }
 
     public String getQuery() {
@@ -25,18 +20,16 @@ public class SearchWord {
         return display;
     }
 
+    public void setDisplay(final int display) {
+        this.display = display;
+    }
+
     public int getStart() {
         return start;
     }
 
-    public String getSort() {
-        return sort;
+    public void setStart(final int start) {
+        this.start = start;
     }
 
-    private String validNecessaryQuery(String query) {
-        if (StringUtils.isEmpty(query)) {
-            throw new NoQueryException(query);
-        }
-        return query;
-    }
 }
