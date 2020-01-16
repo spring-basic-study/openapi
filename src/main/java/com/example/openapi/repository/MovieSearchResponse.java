@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class MovieSearchResponse implements SearchResponse{
+public class MovieSearchResponse extends SearchResponse{
     private List<MovieSearchResult> items;
 
     @Getter
