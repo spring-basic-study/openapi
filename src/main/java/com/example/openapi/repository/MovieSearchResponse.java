@@ -7,12 +7,12 @@ import java.util.List;
 
 @Getter
 @Setter
-public class MovieSearchResponse {
-    private List<MovieSearchResult> item;
+public class MovieSearchResponse implements SearchResponse{
+    private List<MovieSearchResult> items;
 
     @Getter
     @Setter
-    public class MovieSearchResult{
+    public static class MovieSearchResult{
         private String title;
         private String link;
         private String image;

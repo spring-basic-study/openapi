@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class BlogSearchResponse {
+public class BlogSearchResponse implements SearchResponse{
     private int total;
     private int start;
     private int display;
@@ -15,7 +15,7 @@ public class BlogSearchResponse {
 
     @Getter
     @Setter
-    public class SearchResult {
+    public static class SearchResult {
         private String title;
         private String link;
         private String description;
