@@ -4,7 +4,8 @@
 
 1.https://github.com/spring-basic-study/openapi 에서 Fork 한다.
   
-아래 가이드 참고  
+깃헙 코드리뷰는 아래 가이드 참고
+https://brunch.co.kr/@springboot/343  
 https://github.com/next-step/nextstep-docs/blob/master/codereview/review-step1.md
 
 
