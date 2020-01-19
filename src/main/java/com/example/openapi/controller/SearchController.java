@@ -15,12 +15,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class HomeController {
-    static final int LIMIT = 5;
+public class SearchController {
+    private static final int LIMIT_ITEM_COUNT = 5;
     private final SearchService searchService;
     private SearchProperties searchProperties;
 
-    public HomeController(SearchService searchService, SearchProperties searchProperties){ //@Autowired말고 생성자로 주입하기
+    public SearchController(SearchService searchService, SearchProperties searchProperties){ //@Autowired말고 생성자로 주입하기
         this.searchProperties = searchProperties;
         this.searchService = searchService;
     }
@@ -35,7 +35,7 @@ public class HomeController {
         List<BlogSearchResponse.SearchResult> blogItems = new LinkedList<BlogSearchResponse.SearchResult>();
         List<MovieSearchResponse.MovieSearchResult> movieItems = new LinkedList<MovieSearchResponse.MovieSearchResult>();
 
-        for(int i=0;i<LIMIT;i++){
+        for(int i=0;i<LIMIT_ITEM_COUNT;i++){
             movieItems.add(movieSearchResponse.getItems().get(i));
             blogItems.add(blogSearchResponse.getItems().get(i));
         }
