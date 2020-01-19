@@ -8,6 +8,7 @@ import com.example.openapi.service.SearchService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.LinkedList;
@@ -26,7 +27,7 @@ public class SearchController {
     }
 
     @GetMapping("/search")
-    public List<SearchResponse> search(String query){ //다른데서 limit 로직 처리하도록 수정하기
+    public List<SearchResponse> search(@RequestParam(name = "query") String query){ //다른데서 limit 로직 처리하도록 수정하기
         List<SearchResponse> list = new LinkedList<SearchResponse>();
 
         BlogSearchResponse blogSearchResponse = (BlogSearchResponse) searchService.search(searchProperties.getBlogUrl(), query, BlogSearchResponse.class);
@@ -50,12 +51,12 @@ public class SearchController {
     }
 
     @GetMapping("/blog")
-    public SearchResponse blogSearch(String query){
+    public SearchResponse blogSearch(@RequestParam(name = "query") String query){
         return searchService.search(searchProperties.getBlogUrl(),query,BlogSearchResponse.class);
     }
 
     @GetMapping("/movie")
-    public SearchResponse movieSearch(String query){
+    public SearchResponse movieSearch(@RequestParam(name = "query") String query){
         return searchService.search(searchProperties.getMovieUrl(),query,MovieSearchResponse.class);
     }
 }
