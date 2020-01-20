@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class CombineSearchService {
-    private static final int LIMIT_ITEM_COUNT = 10;
+    private static final int LIMIT_ITEM_COUNT = 5;
 
     public List<Result> combine(Blog blog, Movie movie){
         List<Result> results = new LinkedList<Result>();

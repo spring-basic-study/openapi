@@ -18,7 +18,7 @@ import java.util.List;
 public class SearchController {
     private final SearchService searchService;
     private final CombineSearchService combineSearchService;
-    private final SearchProperties searchProperties; 
+    private final SearchProperties searchProperties;
 
     public SearchController(SearchService searchService, SearchProperties searchProperties,
                             CombineSearchService combineSearchService){ //@Autowired말고 생성자로 주입하기
