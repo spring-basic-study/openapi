@@ -7,15 +7,15 @@ import java.util.List;
 
 @Getter
 @Setter
-public class BlogSearchResponse extends SearchResponse{
+public class Blog extends Result {
     private int total;
     private int start;
     private int display;
-    private List<SearchResult> items;
+    private List<Item> items;
 
     @Getter
     @Setter
-    public static class SearchResult {
+    public static class Item {
         private String title;
         private String link;
         private String description;

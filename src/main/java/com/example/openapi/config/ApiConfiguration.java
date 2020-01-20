@@ -14,11 +14,10 @@ import sun.net.www.http.HttpClient;
 @EnableConfigurationProperties({SearchProperties.class})
 public class ApiConfiguration {
     @Bean
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate(){ //질문
         HttpComponentsClientHttpRequestFactory factory
                 = new HttpComponentsClientHttpRequestFactory();
-        CloseableHttpClient client = HttpClientBuilder.create().setMaxConnTotal(50).setMaxConnPerRoute(20).build();
-        factory.setConnectTimeout(10*1000);
+        factory.setConnectTimeout(10*1000); //몇초가 적당한 시간인지?
         factory.setReadTimeout(10*1000);
         RestTemplate restTemplate = new RestTemplate(factory);
         return restTemplate;

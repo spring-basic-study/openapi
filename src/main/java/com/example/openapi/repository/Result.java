@@ -1,4 +1,4 @@
 package com.example.openapi.repository;
 
-public abstract class SearchResponse {
+public abstract class Result {
 }
