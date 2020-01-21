@@ -1,12 +1,12 @@
 # Spring boot Study
 
-##과제  
+## [과제](https://github.com/hwang11/openapi/blob/step02/docs/steps.md) 
+step1  
+step2  
+step3  
 
-[STEP01]()  
 
-[STEP02]()  
 
-[STEP03]()
 
 
 ## What I learned  
