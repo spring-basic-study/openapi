@@ -41,10 +41,12 @@ dependencies { //프로젝트 개발에 필요한 의존성들 선언
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-
+	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5'
 
 }
 
 test {
 	useJUnitPlatform()
 }
+
