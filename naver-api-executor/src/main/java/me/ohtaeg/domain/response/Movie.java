@@ -36,7 +36,7 @@ public class Movie extends SearchApi implements Limitable {
 
     @Override
     public void limit(final int length) {
-        if (CollectionUtils.isEmpty(items) || length == 0) {
+        if (CollectionUtils.isEmpty(items)) {
             return;
         }
 

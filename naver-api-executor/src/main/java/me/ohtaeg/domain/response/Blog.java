@@ -37,7 +37,7 @@ public class Blog extends SearchApi implements Limitable {
     //TODO : Refactoring.. 여기서 구현하는게 맞을까, item을 별도로 추상화 해야할듯함.
     @Override
     public void limit(final int length) {
-        if (CollectionUtils.isEmpty(items) || length == 0) {
+        if (CollectionUtils.isEmpty(items)) {
             return;
         }
 
