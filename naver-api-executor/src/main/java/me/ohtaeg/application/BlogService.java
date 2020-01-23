@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class BlogService implements SearchService {
 
     private SearchRepository searchRepository;
+    private static final int LIMIT_LENGTH = 2;
 
     public BlogService(final SearchRepository searchRepository) {
         this.searchRepository = searchRepository;
@@ -17,7 +18,7 @@ public class BlogService implements SearchService {
     @Override
     public Blog search(final SearchWord searchWord) {
         Blog searchedBlog = (Blog) searchRepository.search(new Blog(searchWord), Blog.class);
-        searchedBlog.limit(2);
+        searchedBlog.limit(LIMIT_LENGTH);
         return searchedBlog;
     }
 }
