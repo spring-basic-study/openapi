@@ -1,8 +1,8 @@
 package me.ohtaeg.domain.response;
 
 
-import me.ohtaeg.api.dto.MovieRequest;
-import me.ohtaeg.api.dto.SearchWord;
+import me.ohtaeg.api.dto.request.MovieRequest;
+import me.ohtaeg.api.dto.request.SearchWord;
 import me.ohtaeg.domain.response.constant.RequestVariableName;
 import me.ohtaeg.util.PropertyUtils;
 import org.springframework.util.CollectionUtils;

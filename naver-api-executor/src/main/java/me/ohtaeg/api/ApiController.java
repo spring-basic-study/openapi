@@ -1,8 +1,8 @@
 package me.ohtaeg.api;
 
-import me.ohtaeg.api.dto.BlogRequest;
-import me.ohtaeg.api.dto.MovieRequest;
-import me.ohtaeg.api.dto.SearchWord;
+import me.ohtaeg.api.dto.request.BlogRequest;
+import me.ohtaeg.api.dto.request.MovieRequest;
+import me.ohtaeg.api.dto.request.SearchWord;
 import me.ohtaeg.application.BlogService;
 import me.ohtaeg.application.MovieService;
 import me.ohtaeg.domain.response.Blog;

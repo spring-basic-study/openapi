@@ -1,4 +1,4 @@
-package me.ohtaeg.api.dto;
+package me.ohtaeg.api.dto.request;
 
 import javax.validation.constraints.NotBlank;
 

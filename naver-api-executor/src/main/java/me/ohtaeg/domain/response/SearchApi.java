@@ -1,9 +1,7 @@
 package me.ohtaeg.domain.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import me.ohtaeg.api.dto.SearchWord;
-
-import java.util.List;
+import me.ohtaeg.api.dto.request.SearchWord;
 
 public abstract class SearchApi {
     @JsonIgnore

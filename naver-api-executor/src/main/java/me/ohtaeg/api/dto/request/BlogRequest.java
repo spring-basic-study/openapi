@@ -1,4 +1,4 @@
-package me.ohtaeg.api.dto;
+package me.ohtaeg.api.dto.request;
 
 public class BlogRequest extends SearchWord {
     private static final String SORT_DEFAULT = "sim";
