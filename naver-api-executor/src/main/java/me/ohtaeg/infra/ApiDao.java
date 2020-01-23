@@ -20,7 +20,8 @@ public class ApiDao implements SearchRepository {
 
     @Override
     public SearchApi search(final SearchApi searchApi, final Class<? extends SearchApi> clazz) {
-        HttpHeaders httpHeaders = getHeader(PropertyUtils.getClientId(), PropertyUtils.getSecret());
+        HttpHeaders httpHeaders = getHeader(PropertyUtils.getInstance().getClientId()
+                                            , PropertyUtils.getInstance().getSecret());
         return restTemplate.exchange(searchApi.getUri()
                 , HttpMethod.GET
                 , new HttpEntity<>(httpHeaders)

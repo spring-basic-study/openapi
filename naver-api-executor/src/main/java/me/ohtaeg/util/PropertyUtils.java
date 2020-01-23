@@ -1,25 +1,33 @@
 package me.ohtaeg.util;
 
 import config.NaverApiProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
-@Component
 public class PropertyUtils {
-    private static NaverApiProperties naverApiProperties;
+    private NaverApiProperties naverApiProperties;
 
-    public PropertyUtils(NaverApiProperties naverApiProperties) {
+    @Autowired
+    public void setNaverApiProperties(final NaverApiProperties naverApiProperties) {
         this.naverApiProperties = naverApiProperties;
     }
 
-    public static String getUrl() {
+    public static PropertyUtils getInstance() {
+        return LazyHolder.INSTANCE;
+    }
+
+    public String getUrl() {
         return naverApiProperties.getUrl();
     }
 
-    public static String getClientId() {
+    public String getClientId() {
         return naverApiProperties.getClientId();
     }
 
-    public static String getSecret() {
+    public String getSecret() {
         return naverApiProperties.getClientSecret();
+    }
+
+    private static class LazyHolder {
+        private static final PropertyUtils INSTANCE = new PropertyUtils();
     }
 }
