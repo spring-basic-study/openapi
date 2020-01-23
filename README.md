@@ -22,7 +22,7 @@ https://developers.naver.com/docs/common/openapiguide/apilist.md#%EA%B2%80%EC%83
 5. Embedded Tomcat Port, Max Thread 설정 변경해보기
 6. Service or Repository 패키지 레이어로 분리해보기
 7. Open API 호출 시 RestTemplate를 사용하며, 별도의 Bean 으로 정의한다.(@Configuration, @Bean 사용)
-8. Lombok 버전을 내가 원하는 버전으로 디펜던시 변경해보기
+8. [선택]Lombok 버전을 내가 원하는 버전으로 디펜던시 변경해보기
 
 
 ## STEP02
