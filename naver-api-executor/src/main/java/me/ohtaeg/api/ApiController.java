@@ -3,6 +3,7 @@ package me.ohtaeg.api;
 import me.ohtaeg.api.dto.request.BlogRequest;
 import me.ohtaeg.api.dto.request.MovieRequest;
 import me.ohtaeg.api.dto.request.SearchWord;
+import me.ohtaeg.api.dto.response.ApiResult;
 import me.ohtaeg.application.BlogService;
 import me.ohtaeg.application.MovieService;
 import me.ohtaeg.domain.response.Blog;
@@ -29,17 +30,19 @@ public class ApiController {
     }
 
     @GetMapping("/blog")
-    public Blog blog(@Valid BlogRequest blogRequest) {
-        return blogService.search(blogRequest);
+    public ApiResult<Blog> blog(@Valid BlogRequest blogRequest) {
+        Blog blog = blogService.search(blogRequest);
+        return ApiResult.OK(blog);
     }
 
     @GetMapping("/movie")
-    public Movie movie(@Valid MovieRequest movieRequest) {
-        return movieService.search(movieRequest);
+    public ApiResult<Movie> movie(@Valid MovieRequest movieRequest) {
+        Movie movie = movieService.search(movieRequest);
+        return ApiResult.OK(movie);
     }
 
     @GetMapping("/with")
-    public List<SearchApi> with(@Valid SearchWord searchWord) {
+    public ApiResult<List<SearchApi>> with(@Valid SearchWord searchWord) {
         // TODO : refactoring
         List<SearchApi> searchApis = new ArrayList<>();
         String query = searchWord.getQuery();
@@ -60,6 +63,6 @@ public class ApiController {
         searchApis.add(blog);
         searchApis.add(movie);
 
-        return searchApis;
+        return ApiResult.OK(searchApis);
     }
 }
