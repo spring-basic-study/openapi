@@ -1,4 +1,4 @@
-package me.ohtaeg.domain.search;
+package me.ohtaeg.domain.response.constant;
 
 public enum RequestVariableName {
     QUERY("query"), DISPLAY("display"), START("start"), SORT("sort");

@@ -1,0 +1,3 @@
+## movie api full paramter call
+GET http://localhost:8080/api/movie?query=아바타&display=1&start=1
+###

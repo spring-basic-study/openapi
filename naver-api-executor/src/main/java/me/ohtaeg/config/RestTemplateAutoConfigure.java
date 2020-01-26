@@ -12,7 +12,6 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @EnableConfigurationProperties(RestTemplateProperties.class)
-@PropertySource("classpath:application.properties")
 public class RestTemplateAutoConfigure {
 
     @Bean
